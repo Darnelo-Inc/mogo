@@ -389,6 +389,8 @@ hr {
 }
 
 .card__inner {
+    position: relative;
+    
     background-color: #95E1D3;
 }
 
