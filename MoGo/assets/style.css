@@ -23,7 +23,11 @@
 21. Footer
 22. Blogs
 23. Instagram
-
+24. Copyright
+25. @media(max-width: 1230px)
+26. @media(max-width: 990px)
+27. @media(max-width: 770px)
+28. @media(max-width: 575px)
 */
 
 
@@ -58,8 +62,13 @@ hr {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page {
+    overflow: hidden;
 }
 
 
@@ -151,7 +160,7 @@ hr {
     display: block;
     width: 60px;
     height: 3px;
-    margin: 70px auto 60px;
+    margin: 50px auto;
 
     background-color: #FFF;
 }
@@ -381,16 +390,18 @@ hr {
 /* 8. Card */
 .card {
     display: flex;
+    flex-wrap: wrap;
+    margin: 80px -15px 0;
     justify-content: space-between;
 }
 
 .card__item {
-    width: 380px;
+    width: 33.333%;
+    padding: 0 15px;
 }
 
 .card__inner {
     position: relative;
-    
     background-color: #95E1D3;
 }
 
@@ -402,6 +413,8 @@ hr {
 
 .card__img img{
     display: block;
+    max-width: 100%;
+    height: auto;
 
     transition: opacity .2s linear;
 }
@@ -442,8 +455,8 @@ hr {
 
 .card__icon {
     display: block;
-    height: 40px;
-    max-width: 40px;
+    height: 30px;
+    max-width: 30px;
     width: 100%;
 
     position: absolute;
@@ -523,13 +536,19 @@ hr {
 /* 10. Services */
 .services {
     display: flex;
-    flex: 1 1 0;
+    flex-wrap: wrap;
 }
 
 .services__item {
+    width: 33.3333%;
     position: relative;
-    padding-left: 80px;
-    padding-right: 45px;
+    padding: 0 35px 40px 85px;
+
+    margin-bottom: 40px;
+}
+
+.services__item--border {
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .services__img {
@@ -568,13 +587,15 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
     position: absolute;
     bottom: -80px;
     right: -85px;
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -582,10 +603,19 @@ hr {
 /* 12. Wedo */
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item {
     width: 50%;
+    padding: 0 15px;
+}
+
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -676,14 +706,17 @@ hr {
 }
 
 .reviews__img {
+    display: block;
+    width: 210px;
+    height: 210px;
+
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     z-index: 1;
     padding: 40px;
 
     border: 3px solid #95E1D3;
-    transform: translateY(-50%);
 }
 
 .reviews__img.radio {
@@ -802,6 +835,17 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -15px;
+}
+
+.logos__item {
+    padding: 0 15px;
+}
+
+.logos__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -891,11 +935,9 @@ hr {
 
 .clients__img {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 40px;
     z-index: 1;
-
-    transform: translateY(-50%);
 }
 
 .clients__name {
@@ -1082,8 +1124,14 @@ hr {
 
 .footer__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -15px;
     padding-bottom: 70px;
+}
+
+.footer__item {
+    padding: 0 15px;
 }
 
 .footer__item-1 {
@@ -1135,7 +1183,7 @@ hr {
 }
 
 .footer-soc__content {
-    margin-top: 15px;
+    padding-top: 15px;
 
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -1158,7 +1206,6 @@ hr {
 .footer__form {
     display: flex;
     width: 100%;
-    height: 40px;
     max-width: 380px;
 }
 
@@ -1272,17 +1319,19 @@ hr {
 }
 
 .instagram__item {
-    width: 32.33333%;
+    width: 33%;
     border-bottom: 1px solid #FFF;
 }
 
 .instagram__item img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
 
-/* 24.Copyright */
+/* 24. Copyright */
 .copyright {
     padding: 20px 0;
 
@@ -1297,6 +1346,440 @@ hr {
 .copyright span {
     color: #F38181;
 }
+
+
+
+/* 25. @media(max-width: 1230px) */
+@media(max-width: 1230px) {
+
+    /* 3. Intro */
+    .intro__title {
+        font-size: 120px;
+    }
+
+    .intro__suptitle {
+        font-size: 52px;
+    }
+
+
+
+    /* 14. Reviews */
+    .reviews__text {
+        font-size: 20px;
+    }
+}
+
+
+
+/* 26. @media(max-width: 990px) */
+@media(max-width: 990px) {
+
+    /* 3. Intro */
+    .intro__title {
+        font-size: 80px;
+    }
+
+    .intro__suptitle {
+        font-size: 32px;
+    }
+
+
+
+    /* 9. Stats */
+    .stats__inner {
+        justify-content: center;
+    }
+
+    .stat__item {
+        flex: none;
+        width: 33%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        border: none;
+    }
+
+    .stat__item:last-child {
+        border: none;
+    }
+
+
+
+    /* 10. Services */
+    .services__item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .services__item--border {
+        border: none;
+    }
+
+
+
+    /* 14. Reviews */
+    .reviews {
+        padding: 0 60px;
+    }
+
+    .reviews__img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .reviews__item {
+        padding-left: 175px;
+    }
+
+
+
+    /* 18. Clients */
+    .clients {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .clients__item {
+        width: 100%;
+    }
+
+    .clients__item:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+    /* 21. Footer */
+    .footer__item-1 {
+        width: 100%;
+    }
+
+    .footer__item-2 {
+        width: 50%;
+    }
+
+    .footer__item-3 {
+        width: 50%;
+    }
+
+
+
+    /* 23. Instagram */
+    .instagram {
+        justify-content: flex-start;
+    }
+
+    .instagram__item {
+        width: auto;
+
+        border-right: 1px solid #FFF;
+    }
+}
+
+
+
+/* 27. @media(max-width: 770px) */
+@media(max-width: 770px) {
+
+    /* 4. Nav */
+    .nav {
+        display: none;
+    }
+
+
+
+    /* 6. Slider */
+    .slider__text {
+        display: none;
+    }
+
+    .slider__item.active:before {
+        width: 50%;
+    }
+
+
+
+    /* 7. Section */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section--devices {
+        padding-bottom: 0;
+    }
+
+
+
+    /* 8. Card */
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+    /* 10. Services */
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
+        width: 100%;
+        max-width: 500px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__img {
+        left: 0;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+
+
+    /* 12. Wedo */
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+
+
+
+    /* 14. Reviews */
+    .reviews__img {
+        position: static;
+        margin: 0 auto 20px;
+    }
+
+    .reviews__item {
+        padding-left: 0;
+    }
+
+    .reviews__text {
+        font-size: 16px;
+    }
+
+    .reviews__author {
+        font-size: 20px;
+    }
+
+
+
+    /* 17. Works */
+    .works {
+        flex-wrap: wrap;
+    }
+
+    .works__col {
+        flex: none;
+        width: 50%;
+    }
+
+
+
+    /* 19. Blog */
+    .blog {
+        flex-wrap: wrap;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .blog__item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .blog__item:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+    /* 21. Footer */
+    .footer__item-2 {
+        width: 100%;
+    }
+
+    .footer__item-3 {
+        width: 100%;
+    }
+}
+
+
+
+/* 28. @media(max-width: 575px) */
+@media(max-width: 575px) {
+
+    /* 3. Intro */
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .intro__suptitle {
+        font-size: 22px;
+    }
+
+
+
+    /* 7. Section */
+    .section__header {
+        margin-bottom: 50px;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+
+    .section__suptitle {
+        font-size: 20px;
+    }
+
+    .section__title:after {
+        margin: 20px auto;
+    }
+
+
+
+    /* 8. Card */
+    .card__icon {
+        width: 25px;
+        height: auto;
+    }
+
+
+
+    /* 9. Stats */
+    .stat__item {
+        width: 100%;
+
+        border-bottom: 1px solid #B5EAE0;
+    }
+
+    .stat__item:last-child {
+        border-bottom: none;
+    }
+
+    .stat__num {
+        font-size: 52px;
+    }
+
+
+
+    /* 11. Devices */
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
+
+
+
+    /* 14. Reviews */
+    .reviews {
+        padding: 0;
+    }
+
+    .reviews__btn {
+        top: 18%;
+    }
+
+
+
+    /* 16. Logos */
+    .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logos__item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .logos__img {
+        margin: 0 auto;
+    }
+
+
+
+    /* 17. Works */
+    .works__col {
+        width: 100%;
+    }
+
+    .works__img {
+        width: 100%;
+    }
+
+
+
+    /* 18. Clients */
+    .clients__img {
+        position: static;
+    }
+
+    .clients__item {
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .clients__prof:after {
+        margin: 15px auto;
+    }
+
+
+
+    /* 21. Footer */
+    .footer__form {
+        flex-wrap: wrap;
+        max-width: none;
+    }
+
+    .footer__input {
+        width: 100%;
+        margin-bottom: 10px;
+
+        border-right: 1px solid #E7E7E7;
+    }
+
+    .footer__btn {
+        width: 100%;
+    }
+
+
+
+    /* 22. Blogs */
+    .blogs__img {
+        width: 80px;
+        height: 50px;
+    }
+
+    .blogs__title {
+        font-size: 10px;
+    }
+
+}
+
 
 
 
