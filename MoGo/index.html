@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MoGo</title>
 
@@ -43,34 +44,39 @@
 </svg><!-- /svg -->
 
 
-<header class="header"><!-- .header -->
+<header class="header" id="header"><!-- .header -->
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo">
+            <div class="header__logo" data-scroll="#intro">
                 MoGo
             </div>
 
-            <nav class="nav">
-                <a href="#" class="nav__link  nav__link--active" target="_blank">about</a>
-                <a href="#" class="nav__link" target="_blank">service</a>
-                <a href="#" class="nav__link" target="_blank">work</a>
-                <a href="#" class="nav__link" target="_blank">blog</a>
-                <a href="#" class="nav__link" target="_blank">contact</a>
-                <svg class="svg__icon  svg__header" height=18px width=18px>
-                    <use xlink:href="#cart"></use>
-                </svg>
-                <svg class="svg__icon  svg__header" height=18px width=18px>
-                    <use xlink:href="#search"></use>
-                </svg>
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link" target="_blank" data-scroll="#about">about</a>
+                <a href="#" class="nav__link" target="_blank" data-scroll="#service">service</a>
+                <a href="#" class="nav__link" target="_blank" data-scroll="#work">work</a>
+                <a href="#" class="nav__link" target="_blank" data-scroll="#blog">blog</a>
+                <a href="#" class="nav__link" target="_blank" data-scroll="#footer">contact</a>
+                <a class="nav__link" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a class="nav__link" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
             </nav>
+
+            <button class="nav-toggle" type="button" id="nav-toggle">
+                <span class="nav-toggle__item">Menu</span>
+            </button>
         </div>
     </div>
 </header> <!-- /.header -->
 
+
 <div class="page"><!-- .page -->
 
 
-<div class="intro"><!-- .intro -->
+<div class="intro" id="intro"><!-- .intro -->
     <div class="container">
         <div class="intro__inner">
             <h3 class="intro__suptitle">Creative Template</h3>
@@ -102,7 +108,7 @@
 </div><!-- /.slider__intro -->
 
 
-<section class="section"><!-- .card -->
+<section class="section" id="about"><!-- .card -->
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">What we do</h3>
@@ -174,7 +180,7 @@
 </div><!-- /.stats -->
 
 
-<section class="section"><!-- .services -->
+<section class="section" id="service"><!-- .services -->
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">We work with</h3>
@@ -249,30 +255,30 @@
             </div>
             <div class="wedo__item">
                 <div class="accordion">
-                    <div class="accordion__item  active">
+                    <div class="accordion__item"  data-collapse="#wedo-1">
                         <div class="accordion__header">
                             <img src="assets/img/wedo/1.png" alt="" class="accordion__icon">
                             <div class="accordion__title">photography</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo-1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                     </div>
-                    <div class="accordion__item">
+                    <div class="accordion__item active" data-collapse="#wedo-2">
                         <div class="accordion__header">
                             <img src="assets/img/wedo/2.png" alt="" class="accordion__icon">
                             <div class="accordion__title">creativity</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo-2">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                     </div>
-                    <div class="accordion__item">
+                    <div class="accordion__item" data-collapse="#wedo-3">
                         <div class="accordion__header">
                             <img src="assets/img/wedo/3.png" alt="" class="accordion__icon">
                             <div class="accordion__title">web design</div>
                         </div>
-                        <div class="accordion__content">
+                        <div class="accordion__content" id="wedo-3">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                     </div>
@@ -286,13 +292,23 @@
 <div class="section  section--gray"><!-- .reviews -->
     <div class="container">
         <div class="reviews">
-            <a class="reviews__btn  reviews__btn--prev"href="#">Prev</a>
-            <a class="reviews__btn  reviews__btn--next"href="#">Next</a>
 
-            <div class="reviews__item">
-                <img src="assets/img/reviews/1.png" alt="" class="reviews__img">
-                <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-                <div class="reviews__author">Jon Doe</div>
+            <div data-slider>
+                <div>
+                    <div class="reviews__item">
+                        <img src="assets/img/reviews/2.png" alt="" class="reviews__img">
+                        <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                        <div class="reviews__author">Jon Doe</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="reviews__item">
+                        <img src="assets/img/reviews/2.png" alt="" class="reviews__img">
+                        <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                        <div class="reviews__author">Darnelo</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -424,7 +440,7 @@
 </div><!-- /.logos -->
 
 
-<section class="section"><!-- .works -->
+<section class="section" id="work"><!-- .works -->
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">What we do</h3>
@@ -523,13 +539,23 @@
 <div class="section"><!-- .reviews -->
     <div class="container">
         <div class="reviews">
-            <a class="reviews__btn  reviews__btn--prev"href="#">Prev</a>
-            <a class="reviews__btn  reviews__btn--next"href="#">Next</a>
 
-            <div class="reviews__item">
-                <img src="assets/img/reviews/2.png" alt="" class="reviews__img  radio">
-                <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-                <div class="reviews__author">Joshua Earle</div>
+            <div data-slider>
+                <div>
+                    <div class="reviews__item">
+                        <img src="assets/img/reviews/2.png" alt="" class="reviews__img">
+                        <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                        <div class="reviews__author">Jon Doe</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="reviews__item">
+                        <img src="assets/img/reviews/2.png" alt="" class="reviews__img">
+                        <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+                        <div class="reviews__author">Darnelo</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -592,7 +618,7 @@
 </section><!-- /.clients -->
 
 
-<section class="section"><!-- .blog -->
+<section class="section" id="blog"><!-- .blog -->
     <div class="container">
         <div class="section__header">
             <h3 class="section__suptitle">Our stories</h3>
@@ -685,7 +711,7 @@
 </section><!-- /.map -->
 
 
-<footer class="footer"><!-- .footer -->
+<footer class="footer" id="footer"><!-- .footer -->
     <div class="container">
         <div class="footer__inner">
             <div class="footer__item  footer__item-1">
@@ -814,6 +840,11 @@
 
 
 </div><!-- /.page -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/app.js"></script>
 
 </body>
 </html>
