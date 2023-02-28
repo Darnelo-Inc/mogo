@@ -1,7 +1,6 @@
 # MoGo
 Adaptive landing with slider and accordion
 
-
 HTML 5 /
 CSS 3 /
 jQuery
