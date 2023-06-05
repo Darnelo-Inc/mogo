@@ -8,3 +8,5 @@ jQuery
 For review: 
     1. Download zip ->
     2. Open index.html
+
+Or use [Github Pages](https://darnelo-inc.github.io/mogo/)
