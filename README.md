@@ -1,12 +1,7 @@
-# MoGo
-Adaptive landing with slider and accordion
+# mogo
 
-HTML 5 /
-CSS 3 /
+[Adaptive landing with slider and accordion](https://darnelo-inc.github.io/mogo/)
+
+HTML /
+CSS /
 jQuery
-
-For review: 
-    1. Download zip ->
-    2. Open index.html
-
-Or use [Github Pages](https://darnelo-inc.github.io/mogo/)
