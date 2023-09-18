@@ -4,4 +4,6 @@
 
 HTML /
 CSS /
-jQuery
+jQuery /
+SlickSlider
+
